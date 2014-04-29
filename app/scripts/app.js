@@ -12,6 +12,14 @@ angular.module('eventBudgetAppApp', [
         templateUrl: 'views/main.html',
         controller: 'MainCtrl'
       })
+      .when('/edit', {
+        templateUrl: 'views/edit.html',
+        controller: 'MainCtrl'
+      })
+      .when('/insert', {
+        templateUrl: 'views/insert.html',
+        controller: 'MainCtrl'
+      })
       .otherwise({
         redirectTo: '/'
       });

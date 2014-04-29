@@ -12,4 +12,11 @@ angular.module('eventBudgetAppApp')
       $scope.testdata = data.response;
     });
 
+   	$scope.newItem = function () {
+   		$scope.testData.push({"name":$scope.name, 
+   			"estcost":$scope.estcost, 
+   			"acttcost":$scope.actcost, 
+   			"quantity":$scope.quantity});
+   	};
+
   });

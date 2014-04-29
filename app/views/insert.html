@@ -12,18 +12,19 @@
   <h1>Event Budgeting</h1>
   <p class="lead">
     <!-- <img src="images/yeoman.png" alt="I'm Yeoman"><br>-->
-
-        <ul>
-
+    Name: <input type="text" ng-model="name" /> <br />
+    Est. Cost: <input type="text" ng-model="estcost" /> <br />
+    Act. Cost: <input type="text" ng-model="actcost" /> <br />
+    Quantity: <input type="text" ng-model="quantity" /> <br />
+    <ul>
         <li data-ng-repeat="item in testData">
           {{ item.name + '- Expected: $' + item.estcost + '; Actual: $' + item.actcost + '; Difference: $'}}  
           {{item.actcost - item.estcost}}
         </li>
-    </ul>
-
+        
+    </ul> 
   </p>
-  <p><a class="btn btn-lg btn-success" href="/eventBudgetApp/app/#/insert">New Item</a></p>
-  <p><a class="btn btn-lg btn-success" href="/eventBudgetApp/app/#/edit">Edit</a></p>
+  <p><button class="btn btn-lg btn-success" ng-click="newItem()">Add</a></p>
 </div>
 
 <div class="footer">
