@@ -9,7 +9,7 @@ angular.module('eventBudgetAppApp')
     ];
 
     InitialData.get(function(data){
-      $scope.testdata = data.response;
+      $scope.testData = data.response;
     });
 
    	$scope.newItem = function () {
