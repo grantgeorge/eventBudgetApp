@@ -12,18 +12,15 @@
   <h1>Event Budgeting</h1>
   <p class="lead">
     <!-- <img src="images/yeoman.png" alt="I'm Yeoman"><br>-->
+    <ul>
 
-        <ul>
-
-        <li data-ng-repeat="item in testData">
+        <li data-ng-repeat="item in testdata">
           {{ item.name + '- Expected: $' + item.estcost + '; Actual: $' + item.actcost + '; Difference: $'}}  
           {{item.actcost - item.estcost}}
         </li>
-    </ul>
-
+    </ul> 
   </p>
-  <p><a class="btn btn-lg btn-success" href="/eventBudgetApp/app/#/insert">New Item</a></p>
-  <p><a class="btn btn-lg btn-success" href="/eventBudgetApp/app/#/edit">Edit</a></p>
+  <p><a class="btn btn-lg btn-success" href="#">Save</a></p>
 </div>
 
 <div class="footer">
