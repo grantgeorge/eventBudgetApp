@@ -12,9 +12,10 @@ angular.module('eventBudgetAppApp', [
         templateUrl: 'views/main.html',
         controller: 'MainCtrl'
       })
-      .when('/edit', {
+      .when('/edit/:id', {
         templateUrl: 'views/edit.html',
-        controller: 'MainCtrl'
+        controller: 'EditCtrl'
+
       })
       .when('/insert', {
         templateUrl: 'views/insert.html',
