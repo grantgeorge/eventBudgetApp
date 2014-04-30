@@ -1,0 +1,66 @@
+<div class="header">
+  <ul class="nav nav-pills pull-right">
+    <li class="active"><a ng-href="#">Home</a></li>
+    <li><a ng-href="#">About</a></li>
+    <li><a ng-href="#">Contact</a></li>
+  </ul>
+  <h3 class="text-muted">eventBudgetApp</h3>
+</div>
+
+
+<h1>Event Budgeting</h1>
+<p class="lead">
+  <!-- <img src="images/yeoman.png" alt="I'm Yeoman"><br>-->
+  <table class="table table-hover">
+    <thead>
+      <tr>
+        <td>
+          Select
+        </td>
+        <td>
+          Name
+        </td>
+        <td>
+          Estimated Cost
+        </td>
+        <td> 
+          Actual Cost
+        </td>
+        <td> 
+          Difference
+        </td>
+      </tr>
+    </thead>
+    <tbody>
+      <tr data-ng-repeat="item in testData | orderBy:'name'">
+        <td>
+          <button class="btn" ng-click="editItem(item)">Edit</button>
+        </td>
+        <td>
+          {{ item.name }} 
+        </td>
+        <td>
+          {{ item.estcost | currency }}
+        </td>
+        <td> 
+          {{ item.actcost | currency }}
+        </td>
+        <td> 
+          {{ item.actcost - item.estcost | currency }} 
+        </td>
+      </tr>
+    </tbody>
+  </table>
+  <br />
+  Total Sum : {{sum() | currency }} <br />
+  Total Difference : {{difference() | currency}} <br />
+
+</p>
+
+
+
+  <p><a class="btn btn-lg btn-success" href="/eventBudgetApp/app/#/insert">New Item</a></p>
+
+<div class="footer">
+  <p>λ from the Chris</p>
+</div>
